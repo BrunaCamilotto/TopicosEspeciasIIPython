@@ -6,3 +6,5 @@ class Produto(models.Model):
     descricao = models.CharField(max_length=200)
     quantidade = models.PositiveIntegerField(default=0)
     data_de_validade = models.DateField(auto_now_add=True)
+    def __str__(self):
+        return self.nome
