@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/stylesheet.css' %}">
+    <title>Lista de Produtos</title>
+</head>
+<body>
+    <h1>✨ Lista de Produtos ✨</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th class="center">Preço</th>
+                <th>Descrição</th>
+                <th class="center">Quantidade</th>
+                <th>Data de Validade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in prod %}
+            <tr>
+                <td>{{ p.nome }}</td>
+                <td class="center">{{ p.preco }}</td>
+                <td>{{ p.descricao }}</td>
+                <td class="center">{{ p.quantidade }}</td>
+                <td>{{ p.data_de_validade }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <footer>💖 Feito com carinho por mim 👩🏻‍🔧 e meu amigo chatgpt 🤖 💖</footer>
+</body>
+</html>
