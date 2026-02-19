@@ -1,38 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛒 Lista de Produtos</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'core/stylesheet.css' %}">
-    <title>Lista de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .text-pink { color: #ff85a2; }
+        .btn-pink {
+            background-color: #ff85a2;
+            color: white;
+            border: none;
+        }
+        .btn-pink:hover {
+            background-color: #ffb6c1;
+            color: white;
+        }
+    </style>
 </head>
-<body>
-    <h1>✨ Lista de Produtos ✨</h1>
+<body class="bg-light">
 
-    <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th class="center">Preço</th>
-                <th>Descrição</th>
-                <th class="center">Quantidade</th>
-                <th>Data de Validade</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for p in prod %}
-            <tr>
-                <td>{{ p.nome }}</td>
-                <td class="center">{{ p.preco }}</td>
-                <td>{{ p.descricao }}</td>
-                <td class="center">{{ p.quantidade }}</td>
-                <td>{{ p.data_de_validade }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+<div class="container py-5">
+    <h1 class="text-center text-pink mb-5">🛒 Lista de Produtos</h1>
 
-    <footer>💖 Feito com carinho por mim 👩🏻‍🔧 e meu amigo chatgpt 🤖 💖</footer>
+    <div class="table-responsive">
+        <table class="table table-hover table-striped table-bordered align-middle text-center">
+            <thead class="table-rosa">
+
+                <tr>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Data de Validade</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if prod %}
+                    {% for p in prod %}
+                    <tr>
+                        <td>{{ p.nome }}</td>
+                        <td>{{ p.preco }}</td>
+                        <td>{{ p.descricao }}</td>
+                        <td>{{ p.quantidade }}</td>
+                        <td>{{ p.data_de_validade }}</td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="5">Nenhum produto cadastrado 😢</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="{% url 'index' %}" class="btn btn-pink">🏠 Voltar à Página Inicial</a>
+    </div>
+</div>
+
+<footer class="text-center py-4 text-pink">
+    💖 Feito com carinho por mim 👩🏻‍🔧 e meu amigo ChatGPT 🤖 💖
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

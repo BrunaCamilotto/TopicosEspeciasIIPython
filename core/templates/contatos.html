@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatos</title>
+    <title>📞 Contatos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/stylesheet.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .text-pink { color: #ff85a2; }
+        .btn-pink {
+            background-color: #ff85a2;
+            color: white;
+            border: none;
+        }
+        .btn-pink:hover {
+            background-color: #ffb6c1;
+            color: white;
+        }
+    </style>
 </head>
-<body>
-<h1>
-    Contatos ldfslçds
-    </h1>
+<body class="bg-light">
 
-    <h1>Nome: {{ nome }}</h1>
+<div class="container text-center py-5">
+    <h1 class="text-pink mb-4">📞 Contatos</h1>
+
+    {% if nome %}
+        <h2 class="mb-4">👤 Nome: {{ nome }}</h2>
+    {% else %}
+        <h2 class="mb-4">⚠️ Nenhum contato informado</h2>
+    {% endif %}
+
+    <a href="{% url 'index' %}" class="btn btn-pink">🏠 Voltar à Página Inicial</a>
+</div>
+
+<footer class="text-center py-4 text-pink">
+    💖 Feito com carinho por mim 👩🏻‍🔧 e meu amigo ChatGPT 🤖 💖
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
