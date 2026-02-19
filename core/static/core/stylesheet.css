@@ -1,8 +1,8 @@
 /* ===== BODY ===== */
 body {
-    background-color: #fff4f8; /* rosa pastel bem suave */
+    background-color: #fff4f8; /* rosa pastel suave */
     font-family: 'Verdana', sans-serif;
-    color: #ffefef;
+    color: #333;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -13,7 +13,7 @@ h1 {
     text-align: center;
     margin: 40px 0 25px 0;
     font-size: 2.5em;
-    color: #ffffff;
+    color: #ff85a2;
     text-shadow: 1px 1px 3px #ffd1e3;
 }
 
@@ -24,12 +24,17 @@ h2 {
     margin: 20px 0;
 }
 
+.text-pink {
+    color: #ff85a2 !important; /* rosa pastel do tema */
+}
+
 /* ===== BOTÕES ===== */
 .btn-pink {
-    background-color: #fde8ed;
+    background-color: #ffa0b5;
     color: white;
     border: none;
     transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 .btn-pink:hover {
@@ -49,14 +54,12 @@ table {
     box-shadow: 0 8px 25px rgba(255, 192, 203, 0.2);
 }
 
-/* Cabeçalho rosa para tabelas (sobrescreve Bootstrap) */
+/* Cabeçalho rosa (força sobre Bootstrap) */
 table thead.table-rosa th {
-    background: linear-gradient(90deg, #ffc4d6, #ffd1df); /* degradê rosa */
-    color: #d94f7a !important; /* força a cor rosa escura */
+    background: linear-gradient(90deg, #ffc4d6, #ffd1df);
+    color: #d94f7a !important;
     text-align: left;
 }
-
-
 
 th, td {
     padding: 14px 18px;
@@ -64,7 +67,7 @@ th, td {
 }
 
 tbody tr:nth-child(even) {
-    background-color: #fff4f8;
+    background-color: #ffdfea;
 }
 
 tbody tr:hover {
@@ -83,22 +86,51 @@ td.highlight {
     font-weight: bold;
 }
 
-/* ===== NAV / LISTAS ===== */
-.center-list {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
+/* ===== FORMULÁRIOS ===== */
+form {
+    background-color: #fff0f5;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(255, 192, 203, 0.2);
 }
 
-.center-list a {
-    text-decoration: none;
+form .form-label {
     font-weight: bold;
-    color: #ff85a2;
-    padding: 10px 20px;
-    border: 2px solid #ffb6c1;
+    color: #d94f7a;
+}
+
+form .form-control {
     border-radius: 8px;
+    border: 1px solid #ffb6c1;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+form .form-control:focus {
+    border-color: #ff85a2;
+    box-shadow: 0 0 5px rgba(255, 133, 162, 0.5);
+}
+
+/* ===== LINKS ===== */
+a {
+    color: #ff4c76;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #ff85a2;
+    text-decoration: underline;
+}
+
+/* Links dentro da lista central */
+.center-list a {
+    color: #ff4c76;
+    border: 2px solid #ffb6c1;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
@@ -120,4 +152,5 @@ footer {
     h1 { font-size: 2em; }
     h2 { font-size: 1.2em; }
     th, td { padding: 10px 12px; }
+    form { padding: 20px; }
 }
