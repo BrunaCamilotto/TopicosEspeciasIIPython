@@ -1,10 +1,9 @@
 from django.urls import path
-from .views import index
-from .views import contatos
-from .views import produtos
+from .views import index, contatos, produtos, clientes
 
 urlpatterns = [
-    path('', index, name="urlindex"),
-    path('contatos', contatos, name="urlcontatos" ),
-    path('produtos', produtos, name="urlprodutos" ),
+    path('', index, name="index"),                    # Página inicial
+    path('contatos/', contatos, name="contatos"),    # Contatos
+    path('produtos/', produtos, name="produtos"),    # Lista de produtos
+    path('clientes/', clientes, name="clientes"),    # Lista de clientes
 ]
