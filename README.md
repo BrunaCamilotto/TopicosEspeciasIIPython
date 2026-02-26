@@ -5,10 +5,10 @@ Exercicios e materiais desenvolvidos em sala de aula no IFSC
 🚀 Comandos do Projeto
 
     1️⃣ Migrações (ordem correta)
-        # 1º - Criar as migrações
+    ⚡  # 1º - Criar as migrações
         python manage.py makemigrations
 
-        # 2º - Aplicar as migrações
+    ⚡  # 2º - Aplicar as migrações
         python manage.py migrate
 
     👤 Criar Superusuário
@@ -26,4 +26,7 @@ Exercicios e materiais desenvolvidos em sala de aula no IFSC
         from localflavor.br.models import BRCPFField
 
     ⚡ Instalar tzdata
-    python -m pip install tzdata
+         python -m pip install tzdata
+    
+    ⚡ Instalar bootstrap V5
+         pip install django-bootstrap-v5

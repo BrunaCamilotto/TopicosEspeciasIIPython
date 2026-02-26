@@ -12,14 +12,14 @@ body {
 h1 {
     text-align: center;
     margin: 40px 0 25px 0;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #ff85a2;
     text-shadow: 1px 1px 3px #ffd1e3;
 }
 
 h2 {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1em;
     color: #d94f7a;
     margin: 20px 0;
 }
@@ -52,6 +52,7 @@ table {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(255, 192, 203, 0.2);
+    font-size: 0.8rem;
 }
 
 /* Cabeçalho rosa (força sobre Bootstrap) */
@@ -59,11 +60,14 @@ table thead.table-rosa th {
     background: linear-gradient(90deg, #ffc4d6, #ffd1df);
     color: #d94f7a !important;
     text-align: left;
+   
 }
 
 th, td {
     padding: 14px 18px;
     border: 1px solid #ffd6e7;
+    
+
 }
 
 tbody tr:nth-child(even) {

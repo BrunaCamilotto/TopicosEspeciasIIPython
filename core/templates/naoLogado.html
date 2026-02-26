@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Não Logado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fff4f8;
+            font-family: 'Verdana', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Delius Swash Caps', cursive;
+            font-size: 2em;
+            color: #ff85a2;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #d94f7a;
+            margin-bottom: 30px;
+        }
+
+        .btn-pink {
+            background-color: #ffa0b5;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 25px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-pink:hover {
+            background-color: #ffb6c1;
+            color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>⚠️ Você não está logado</h2>
+        <p>Para acessar esta página, é necessário fazer login.</p>
+        <a href="{% url 'loginTela' %}" class="btn-pink">Ir para Login</a>
+    </div>
+</body>
+</html>

@@ -16,8 +16,10 @@ class Cliente(models.Model):
     nome = models.CharField(max_length=50)
     sobrenome = models.CharField(max_length=50)
     data_nascimento = models.DateField(null=True, blank=True)
-    cpf = BRCPFField(unique=True)
-    telefone = models.DecimalField(max_digits=13, decimal_places=0, blank=True, null=True)
+    cpf = models.CharField(max_length=11)
+    
+    #cpf = BRCPFField(unique=True)
+    telefone = models.CharField(max_length=14)
     email = models.EmailField(max_length=254)
     def __str__(self):
         return self.nome
